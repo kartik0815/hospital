@@ -1,0 +1,45 @@
+<br>
+<br>
+<br>
+<h1 class="text-center">Edit Registration</h1>
+<br>
+<div class="container col-lg-5">
+    <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success !!</strong> Data updated successfully.
+        <button (click)="closebut()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <form [formGroup]="editUser"(ngSubmit)="updateUser()">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" [disabled]="true" class="form-control" placeholder="Enter name" formControlName="name" >
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Contact No</label>
+            <input type="number" class="form-control" placeholder="Enter contact number" formControlName="contactNo">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Address</label>
+            <input type="text" class="form-control" placeholder="Enter address" formControlName="address">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Email ID</label>
+            <input type="email" class="form-control" placeholder="Enter email id" formControlName="email">
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="email" class="form-control" placeholder="Enter age" formControlName="age">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" style="width:100%">Update</button>
+    </form>
+</div>

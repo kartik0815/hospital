@@ -1,0 +1,27 @@
+.a{
+    background-size: contain;
+    height: 100%;
+}
+.b{
+    background-color: aquamarine;
+}
+
+.card{
+    margin-top:10px;
+    border:none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: rgb(68, 189, 183);
+    background: linear-gradient(90deg,rgb(51, 149, 167)0%,rgba(77, 145, 177, 0.836)100%);
+}
+.card h1,h6{
+color: white;
+}
+
+label{
+    color:white;
+}

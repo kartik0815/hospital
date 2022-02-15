@@ -1,0 +1,29 @@
+<div class="b">
+<div class="container" class="a">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login</h1>
+                   
+                </div>
+                
+                    <form [formGroup]="loginForm" (ngSubmit)="login()" >
+                        <div class="mb-3">
+                          <label class="form-label">Email address</label>
+                          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label">Password</label>
+                          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+                      </form>
+                      <br>
+                      <a routerLink="/signup" style="color:white">New User? Click to Sign up .</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,58 @@
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>SignUp</h1>
+        </div>
+
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+          <div class="mb-3">
+            <label class="form-label">Name <span class="text-danger">*</span></label>
+            <input formControlName="name" type="text" class="form-control" id="name">
+            <!-- <div *ngIf="signupForm.controls['name'].invalid && signupForm.controls['name'].touched"
+              class="alert alert-danger">
+              <div *ngIf="signupForm.controls['name'].errors.required">
+                Name is required.
+              </div>
+            </div> -->
+         </div>
+    
+            <div class="mb-3">
+              <label class="form-label">Contact No <span class="text-danger">*</span></label>
+              <input formControlName="contactNo" type="number" class="form-control" id="contactNo" >
+              <span style="color: red;" *ngIf="contactNo && contactNo.invalid && contactNo.touched">* requires/incorrect</span>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label">Email address <span class="text-danger">*</span></label>
+              <input formControlName="email" type="email" class="form-control" id="exampleInput1"
+                aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password <span class="text-danger">*</span></label>
+              <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+              <span style="color: red;" *ngIf="password && password.invalid && password.touched">* Required</span>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Age <span class="text-danger">*</span></label>
+              <input formControlName="age" type="number" class="form-control" id="exampleInputage1">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Address <span class="text-danger">*</span></label>
+              <input formControlName="address" type="text" class="form-control" id="exampleInputaddress1">
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%">Sign Up</button>
+        </form>
+        <br>
+        <a routerLink="/login" style="color:white">Already have an account? Click to login </a>
+
+      </div>
+    </div>
+  </div>
+</div>

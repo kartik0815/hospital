@@ -1,0 +1,56 @@
+<br>
+<br>
+<br>
+<div class="card-body">
+
+    <table class="table" class="center" style="border: 5px rgb(0, 0, 0) solid; width:30%;">
+        <thead style=" border: 2px black solid; width:100%; ">
+            <tr>
+                <th scope="col" class="ent">Name</th>
+                <th scope="col">{{collect.name}}</th>
+                <!-- <th scope="col" >Email Id</th>
+          <th scope="col" >Age</th> -->
+            </tr>
+            <tr>
+                <th scope="col" class="ent">Email</th>
+                <th scope="col">{{collect.email}}</th>
+            </tr>
+            <tr>
+                <th scope="col" class="ent">Age</th>
+                <th scope="col">{{collect.age}}</th>
+            </tr>
+            <tr>
+                <th scope="col" class="ent">Contact Number</th>
+                <th scope="col">{{collect.contactNo}}</th>
+            </tr>
+            <tr>
+                <th scope="col" class="ent">Address</th>
+                <th scope="col">{{collect.address}}</th>
+            </tr>
+        </thead>
+    </table>
+    <!-- <br><br>
+    <a class="btn btn-success" style="width: 20%;" routerLink="/update/{{collect.id}}">Edit Details</a><br> -->
+
+
+    <br>
+    <h2 style="font-weight: bold;">Add your booking details</h2>
+
+    <form [formGroup]="docForm" (ngSubmit)="doctor()">
+        <label for="specialize" style="color: black; font-weight: bold;" class="form-label">Select the category for doctor consultancy: </label><br><br>
+        <select class="form-select" formControlName="specialize" class="form-control" id="specialize"  style="width: 15%; border-color: brown; border-width: 5px;">
+            <option [ngValue]="" selected disabled>--Select--</option>
+            <option *ngFor="let spec of specialization" [ngValue]="spec">{{spec.name}}</option>
+        </select>
+        <button type="submit" class="btn btn-primary" (click)="doctor()" style="width:12%">check doctors</button>
+    </form><br>
+    <form>
+        <div *ngIf="status" >
+            <label>Date : </label>&nbsp;
+            <input type="date" style="border-color: brown; border-width: 3px;">
+        </div>
+    </form> 
+     <!-- <div *ngFor="let it of doc">
+    {{it.Name}}
+    {{it.specialization}}
+</div> -->

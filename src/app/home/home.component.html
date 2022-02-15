@@ -1,0 +1,73 @@
+<br>
+<br>
+    <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav  nav-pills card-header-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Patient Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/book">Appointment details</a> 
+        </li>
+      </ul>
+    </div>
+    <br><br>
+    <div class="card-body">
+      
+      <table class="table" class="center" style="border: 5px black solid; width:30%;" >
+        <thead style=" border: 2px black solid; width:100%; "> 
+          <tr>
+            <th scope="col" class="ent">Name</th>
+            <th scope="col" >{{collection.name}}</th>
+            <!-- <th scope="col" >Email Id</th>
+            <th scope="col" >Age</th> -->
+          </tr>
+          <tr>
+            <th scope="col"  class="ent">Email</th>
+            <th scope="col" >{{collection.email}}</th>
+          </tr>
+          <tr>
+            <th scope="col" class="ent" >Age</th>
+            <th scope="col" >{{collection.age}}</th>
+          </tr>
+          <tr>
+            <th scope="col" class="ent" >Contact Number</th>
+            <th scope="col" >{{collection.contactNo}}</th>
+          </tr>
+          <tr>
+            <th scope="col" class="ent">Address</th>
+            <th scope="col" >{{collection.address}}</th>
+          </tr>
+          <!-- <th scope="col" >{{collection.contactNo}}</th>
+          <th scope="col">{{collection.address}}</th> -->
+        </thead>
+        <!-- <tbody>
+          <tr >
+            <th scope="col" >{{collection.name}}</th>
+            <th scope="col" >{{collection.email}}</th>
+            <th scope="col" >{{collection.age}}</th>
+          </tr>
+        </tbody>
+        <thead style="background-color: rgb(26, 206, 230); border: 1px black solid; width:1000%; justify-content: center;"> 
+          <tr>
+            <th scope="col" >Contact Number</th>
+            <th scope="col">Address</th>
+            <th scope="col" >gender</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <th scope="col" >{{collection.contactNo}}</th>
+            <th scope="col">{{collection.address}}</th>
+            <th scope="col" >Will be update soon</th>
+          </tr>
+        </tbody> -->
+        </table>
+        <br><br>
+        <a class="btn btn-success" style="width: 20%;" routerLink="/update/{{collection.id}}">Edit Details</a><br>
+        <br>
+      <a class="btn btn-primary" style="width: 20%;" routerLink="/book/{{collection.id}}">Schedule Appointment</a>
+    </div>
+  </div>
+
